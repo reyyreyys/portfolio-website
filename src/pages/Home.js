@@ -1,26 +1,34 @@
 import React from 'react';
 import ImageCarousel from '../components/ImageCarousel';
+import MatrixGame from '../components/MatrixGame';
 
 import profileImage1 from '../assets/images/profile-1.jpg';
 import profileImage2 from '../assets/images/profile-2.jpg';
+import profileImage3 from '../assets/images/profile-3.jpg';
+import profileImage4 from '../assets/images/profile-4.jpg';
 
+import teamCollaborationPhoto from '../assets/images/team-collaboration.jpg';
 const Home = () => {
-  // Define your profile images here
   const profileImages = [
     {
       type: 'image',
-      src: profileImage1, // Use the imported variable
-      alt: 'Headshot'
+      src: profileImage1, 
+      alt: 'Professional headshot of Reyes'
     },
     {
       type: 'image',
       src: profileImage2,
-      alt: 'Apple Dev Center'
+      alt: 'Reyes at Apple Developer Center event'
     },
-        {
+    {
       type: 'image',
-      src: profileImage2,
-      alt: 'Apple Dev Center'
+      src: profileImage3,
+      alt: 'Reyes with Rehabify development team'
+    },
+    {
+      type: 'image',
+      src: profileImage4,
+      alt: 'Reyes with INC project team'
     }
   ];
 
@@ -40,10 +48,17 @@ const Home = () => {
           <div className="hero-image">
             <ImageCarousel 
               images={profileImages}
-              interval={4000}
+              interval={5000}
               autoPlay={true}
             />
           </div>
+        </div>
+      </section>
+
+      {/* Interactive Minigame Section */}
+      <section className="minigame-section">
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
+          <MatrixGame />
         </div>
       </section>
 
@@ -65,9 +80,11 @@ const Home = () => {
             </p>
           </div>
           <div className="about-image">
-            <div className="image-placeholder">
-              <span>Working/Event Photo</span>
-            </div>
+            <img 
+              src={teamCollaborationPhoto}
+              alt="Reyes collaborating with team members on projects"
+              className="about-photo"
+            />
           </div>
         </div>
       </section>

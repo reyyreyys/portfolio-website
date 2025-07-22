@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-content">
         <p>&copy; 2025 Reyes Ng. All rights reserved.</p>
         <div className="footer-links">
-          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+          <a href="linkedin.com/in/reyesng" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
           <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">

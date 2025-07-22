@@ -34,8 +34,8 @@ const Contact = () => {
           <div className="contact-links">
             <div className="contact-item">
               <strong>LinkedIn:</strong> 
-              <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-                linkedin.com/in/reyes-ng
+              <a href="linkedin.com/in/reyesng" target="_blank" rel="noopener noreferrer">
+                linkedin.com/in/reyesng
               </a>
             </div>
             <div className="contact-item">
