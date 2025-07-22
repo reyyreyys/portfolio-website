@@ -4,9 +4,9 @@ const SpeedTypingGame = () => {
   const [gameState, setGameState] = useState('menu'); // 'menu', 'playing', 'finished'
   const [currentSnippet, setCurrentSnippet] = useState('');
   const [userInput, setUserInput] = useState('');
-  const [setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [startTime, setStartTime] = useState(null);
-  const [setEndTime] = useState(null);
+  const [endTime, setEndTime] = useState(null);
   const [wpm, setWpm] = useState(0);
   const [accuracy, setAccuracy] = useState(100);
   const [errors, setErrors] = useState(0);
@@ -17,7 +17,7 @@ const SpeedTypingGame = () => {
 
   const codeSnippets = [
     {
-      code: 'const greeting = (name) => `Hello, ${name}!`;',
+      code: "const greeting = (name) => `Hello, ${name}!`;",
       language: "JavaScript",
       difficulty: "Easy"
     },
