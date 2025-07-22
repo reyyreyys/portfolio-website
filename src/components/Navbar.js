@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import ThemeToggle from './ThemeToggle'; // Add this import
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,10 +28,13 @@ const Navbar = () => {
             Contact
           </Link>
         </div>
-        <div className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+        <div className="nav-actions">
+          <ThemeToggle /> {/* Add theme toggle */}
+          <div className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
         </div>
       </div>
     </nav>

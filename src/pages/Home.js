@@ -1,7 +1,29 @@
 import React from 'react';
+import ImageCarousel from '../components/ImageCarousel';
 
+import profileImage1 from '../assets/images/profile-1.jpg';
+import profileImage2 from '../assets/images/profile-2.jpg';
 
 const Home = () => {
+  // Define your profile images here
+  const profileImages = [
+    {
+      type: 'image',
+      src: profileImage1, // Use the imported variable
+      alt: 'Headshot'
+    },
+    {
+      type: 'image',
+      src: profileImage2,
+      alt: 'Apple Dev Center'
+    },
+        {
+      type: 'image',
+      src: profileImage2,
+      alt: 'Apple Dev Center'
+    }
+  ];
+
   return (
     <div className="home">
       <section className="hero">
@@ -16,10 +38,11 @@ const Home = () => {
             </p>
           </div>
           <div className="hero-image">
-            {/* Place your profile image here */}
-            <div className="image-placeholder">
-              <span>Your Profile Photo</span>
-            </div>
+            <ImageCarousel 
+              images={profileImages}
+              interval={4000}
+              autoPlay={true}
+            />
           </div>
         </div>
       </section>
@@ -42,7 +65,6 @@ const Home = () => {
             </p>
           </div>
           <div className="about-image">
-            {/* Place an image of you working or at an event */}
             <div className="image-placeholder">
               <span>Working/Event Photo</span>
             </div>
